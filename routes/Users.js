@@ -157,7 +157,7 @@ router.route("/send-mail").post((req, res) => {
     // TO SEND AN AUTOMATIC EMAIL WITH AN LINK TO THE RESET PASSWORD PAGE:
     const subject = "Reset Password";
     const content = ` <h1>You requested for a password change</h1>
-            <h3>Click on this <a href="http://localhost:3000/reset-password/${emailFromDB._id}/${token}">link</a> to reset your password</h3>
+            <h3>Click on this <a href="https://session-44-zen-task.herokuapp.com/reset-password/${emailFromDB._id}/${token}">link</a> to reset your password</h3>
             `;
     SendMail(emailFromDB.email, subject, content);
 
